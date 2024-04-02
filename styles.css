@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #001523;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #001523;
+    color: #fff;
+    position: relative; 
+    z-index: 2;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right input[type="search"], .nav-right button {
+    margin-right: 10px;
+    background-color: #14293a;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#menuToggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+#home
+{
+    width: 150px;
+    height: 20px;
+    background-color: cornsilk;
+    color: black;
+    padding: 10px;
+    margin-left: -10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#sidebar {
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 60px; 
+    bottom: 0;
+    background: #001523;
+    padding: 10px;
+    padding-top: 50px;
+    padding-left: 20px;
+    transition: transform 0.3s ease; 
+    transform: translateX(0); 
+    z-index: 1; 
+}
+
+#sidebar nav a {
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    margin-left: 220px; 
+    padding: 20px;
+    color: #333;
+}
+
+.categories button {
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+
+.categories button.active {
+    background-color: cornsilk; 
+    color: black; 
+    font-weight: 900;
+}
+
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video {
+    width: 320px;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.thumbnail {
+    position: relative;
+    
+}
+
+.duration {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    background: black;
+    color:white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: x-small;
+    font-weight: 900;
+}
+
+.video-info {
+    display: flex;
+    align-items: center;
+    color: silver;
+    
+}
+
+.video-info img {
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.title
+{
+    margin-top: 10px;
+    color: azure;
+    font-size: 14px;
+}
+.channel-name
+{
+    margin-top: 10px;
+    font-size: 12px;
+
+}
+.views
+{
+    font-size: 12px;
+}
+
+
+@media screen and (max-width: 600px) {
+    #menuToggle {
+        display: block; 
+    }
+
+    #sidebar {
+        transform: translateX(-100%); 
+        top: 0; 
+    }
+
+    main {
+        margin-left: 0; 
+    }
+}
